@@ -9,3 +9,8 @@ def count_characters(content):
         char_dict[c] += 1
 
     return char_dict
+
+def sort_dict(d):
+    list_dict = [{"char": char, "num": num} for char, num in d.items()]
+    list_dict.sort(reverse=True, key=lambda x: x["num"])
+    return list_dict
